@@ -6,6 +6,13 @@ def cifra_de_cesar(texto, deslocamento):
     # TODO: Implementar a lógica
     pass
 
-def valida_cpf(cpf_string):
-    # TODO: Implementar a lógica
-    pass
+def encontrar_maior_palavra(frase):
+    if len(frase) == 0:
+        return ""
+
+    palavras = frase.split()
+
+    # seleciona apenas os caracteres alfabeticos e obtem a palavra de maior tamanho
+    maior_palavra = max(palavras, key=lambda p: len(''.join(filter(str.isalpha, p))))
+
+    return ''.join(filter(str.isalpha, maior_palavra))
