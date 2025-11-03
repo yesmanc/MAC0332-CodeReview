@@ -1,6 +1,13 @@
+from collections import Counter
+
 def sao_anagramas(string1, string2):
-    # TODO: Implementar a lógica
-    pass
+    string1 = "".join(filter(str.isalnum, string1)).lower()
+    string2 = "".join(filter(str.isalnum, string2)).lower()
+
+    if len(string1) != len(string2):
+        return False
+
+    return Counter(string1) == Counter(string2)
 
 def cifra_de_cesar(texto, deslocamento):
     # TODO: Implementar a lógica
