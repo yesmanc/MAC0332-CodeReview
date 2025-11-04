@@ -1,6 +1,9 @@
 from collections import Counter
 
 def sao_anagramas(string1, string2):
+    if not isinstance(string1, str) or not isinstance(string2, str):
+        raise TypeError("As entradas devem ser strings.")
+
     # padronizacao das strings
     string1 = "".join(filter(str.isalnum, string1)).lower()
     string2 = "".join(filter(str.isalnum, string2)).lower()
