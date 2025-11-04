@@ -7,7 +7,7 @@ def cifra_de_cesar(texto, deslocamento):
     pass
 
 def encontrar_maior_palavra(frase):
-    if len(frase) == 0:
+    if not frase.strip():
         return ""
 
     palavras = frase.split()
