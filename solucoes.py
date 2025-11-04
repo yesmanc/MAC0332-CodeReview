@@ -7,6 +7,9 @@ def cifra_de_cesar(texto, deslocamento):
     pass
 
 def encontrar_maior_palavra(frase):
+    if not isinstance(frase, str):
+        raise TypeError("A entrada deve ser string.")
+
     if not frase.strip():
         return ""
 
