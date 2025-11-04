@@ -3,6 +3,11 @@ def sao_anagramas(string1, string2):
     pass
 
 def cifra_de_cesar(texto, deslocamento):
+    if not isinstance(texto, str):
+        raise TypeError("O texto deve ser uma string.")
+    if not isinstance(deslocamento, int):
+        raise TypeError("O deslocamento deve ser um inteiro.")
+    
     texto_final = ""
     
     for char in texto:
